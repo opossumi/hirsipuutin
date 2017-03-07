@@ -6,11 +6,11 @@ Yksinkertainen hirsipuupeli automaattivastustajille.
 
 ### Interaktiivinen käyttö
 
-Aja hirsipuutin komennolla `python hirsipuutin.py words.txt`
+Aja hirsipuutin komennolla `python hirsipuutin.py sanat.txt`
 
 ### Ratkaisimen käyttö
 
-Aja hirsipuutin komennolla `python hirsipuutin.py words.txt <ratkaisimen ajokomento>`, esimerkiksi `python hirsipuutin.py words.txt python ratkaisin.py`
+Aja hirsipuutin komennolla `python hirsipuutin.py sanat.txt <ratkaisimen ajokomento>`, esimerkiksi `python hirsipuutin.py sanat.txt python ratkaisin.py`
 
 ### Asetukset
 
@@ -32,8 +32,7 @@ Aja hirsipuutin komennolla `python hirsipuutin.py words.txt <ratkaisimen ajokome
 
 * `--save-score-data`
 
-    Tallentaa pelaajan pistekertymän tiedostoon &lt;pelaajan nimi&gt;.&lt;juokseva numero&gt;.data
-
+    Tallentaa pelaajan pistekertymän tiedostoon `<pelaajan nimi>.<juokseva numero>.data`
 * `--server`
 
     Käynnistää sovelluksen palvelintilassa, peluuttaa hirsipuuta WebSocketin yli
@@ -53,6 +52,6 @@ Kaikki teksti hirsipuuttimen ja ratkaisimen välillä välitetään UTF-8 -kooda
 1. Seuraavaksi pelaaja syöttää arvauksensa kirjaimelle (pienet kirjaimet) tai koko sanalle.
 1. Hirsipuutin reagoi tähän syöttämällä pelaajalle tulosrivin, joka merkitsee joko onnistumista tai epäonnistumista.
 
-Tilarivi on voiton tapauksessa muotoa `WIN <oikeiden arvausten lukumäärä>/<väärien arvausten lukumäärä> <sana>`, tappion tapauksessa `LOSE <oikeiden arvausten lukumäärä>/<väärien arvausten lukumäärä> <sana>`. Jos sana on kesken, tilarivi sisältää sanan arvaamattomat kirjaimet korvattuina pisteillä. Arvatut kirjaimet esitetään aina pieninä kirjaimina.
+Tilarivi on voiton tapauksessa muotoa `WIN <oikeiden arvausten lukumäärä>/<väärien arvausten lukumäärä>/<pistekertymä> <sana>`, tappion tapauksessa `LOSE <oikeiden arvausten lukumäärä>/<väärien arvausten lukumäärä>/<pistekertymä> <sana>`. Jos sana on kesken, tilarivi sisältää sanan arvaamattomat kirjaimet korvattuina pisteillä. Arvatut kirjaimet esitetään aina pieninä kirjaimina.
 
 Tulosrivi on onnistumisen tapauksessa muotoa `HIT <oikeiden arvausten lukumäärä>/<väärien arvausten lukumäärä> <arvattu kirjain/sana>` ja epäonnistumisen tapauksessa `MISS <oikeiden arvausten lukumäärä>/<väärien arvausten lukumäärä> <arvattu kirjain/sana>`.
