@@ -32,7 +32,7 @@ Aja hirsipuutin komennolla `python hirsipuutin.py words.txt <ratkaisimen ajokome
 
 * `--save-score-data`
 
-    Tallentaa pelaajan pistekertymän tiedostoon <pelaajan nimi>.<juokseva numero>.data
+    Tallentaa pelaajan pistekertymän tiedostoon &lt;pelaajan nimi&gt;.&lt;juokseva numero&gt;.data
 
 * `--server`
 
