@@ -1,5 +1,7 @@
 # Simple hangman solver, guesses letters in order of frequency
 
+import sys
+
 print('triviaali')
 
 words = []
@@ -17,7 +19,7 @@ try:
     status = input()
     while status:
         for letter, frequency in guess_order:
-            print(letter)
+            sys.stdout.buffer.write((letter + '\n').encode('utf-8'))
             result = input()
             status = input()
             if status.startswith('WIN') or status.startswith('LOSE') or not status:
